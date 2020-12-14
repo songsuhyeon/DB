@@ -1,0 +1,13 @@
+<!doctype HTML>
+<html>
+    <body>
+        <h1>List of Academy</h1>
+        {% for item in items %}
+        {{ item.name }} <br>
+        {{ item.address }} <br>
+        {{ item.total_price }} <br><br>
+
+        <a href=#>Edit</a><br><br> 
+        {% endfor %}
+    </body>
+</html>
