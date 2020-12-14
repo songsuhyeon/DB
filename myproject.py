@@ -9,23 +9,10 @@ def showList():
     db = sqlite3.connect("listDB.db")
     db.row_factory = sqlite3.Row
     items = db.execute(
-        'select name, address, total_price'
-        ' from list_item'
+        'select name, address, total_price from Academy'
     ).fetchall()
     db.close()
     return render_template('list.html', items= items)
-
-@app.route('/list/edit/<int:list_id>/')
-def editList(list_id):
-    db = sqlite3.connect("listDB.db")
-    db.row_factory = sqlite3.Row
-    item = db.execute(
-        'select name, address, total_price'
-        ' from list_item where id=?'
-        ,(list_id,)
-    ).fetchone()
-    db.close()
-    return render_template('editlist.html', item=item)
 
 
 if __name__ == '__main__':
