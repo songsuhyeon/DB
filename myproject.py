@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 @app.route('/')
 @app.route('/list')
-def showList():
-    db = sqlite3.connect("listDB.db")
+def showlist():
+    db = sqlite3.connect("DBlist.db")
     db.row_factory = sqlite3.Row
     items = db.execute(
-        'select name, address, total_price from Academy'
+        'select id, name, address, total_price from Academy'
     ).fetchall()
     db.close()
 
@@ -18,4 +18,6 @@ def showList():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host='127.0.0.1', port=7000)
+
+    
