@@ -2,9 +2,9 @@ import sqlite3
 import argparse
 
 parser = argparse.ArgumentParser(description="arguments for building a test database.")
-parser.add_argument('--db', default='listDB.db', help='sqlite3 database')
+parser.add_argument('--db', default='DBlist.db', help='sqlite3 database')
 parser.add_argument('--schema', default='schema.sql', help='schema definition')
-parser.add_argument('--data', default='listDB.sql', help='data')
+parser.add_argument('--data', default='DBlist.sql', help='data')
 args = parser.parse_args()
 
 def init_db(dump_bulkdata=False):

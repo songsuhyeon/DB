@@ -1,13 +1,17 @@
 <!doctype HTML>
 <html>
+    <head>
+
+    </head>
     <body>
         <h1>List of Academy</h1>
         {% for item in items %}
-        {{ item.name }} <br>
-        {{ item.address }} <br>
-        {{ item.total_price }} <br><br>
-
-        <a href=#>Edit</a><br><br> 
+        학원명 : {{ item.name }} <br>
+        주소 : {{ item.address }} <br>
+        학원비 : {{ item.total_price }} <br><br>
+        <a href={{ url_for ('editList' , list_name=item.id)}}> Edit</a><br><br> 
         {% endfor %}
+
+       
     </body>
 </html>

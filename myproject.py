@@ -12,6 +12,7 @@ def showList():
         'select name, address, total_price from Academy'
     ).fetchall()
     db.close()
+
     return render_template('list.html', items= items)
 
 

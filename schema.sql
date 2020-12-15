@@ -1,4 +1,5 @@
 CREATE TABLE Academy (
+	id	INTEGER NOT NULL UNIQUE,
 	name	TEXT,
 	address	TEXT,
 	call	TEXT,
@@ -20,5 +21,6 @@ CREATE TABLE Academy (
 	etc_price	INTEGER,
 	total_price	INTEGER,
 	Fname	TEXT,
-	teacher	INTEGER
+	teacher	INTEGER,
+	PRIMARY KEY(id)
 )
